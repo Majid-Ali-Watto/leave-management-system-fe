@@ -1,3 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .error {
+    @apply text-red-500 text-sm mt-1;
+  }
+}
+
 /* Global Styles */
 * {
   margin: 0;
@@ -162,6 +188,7 @@ table caption p {
 .form-group {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 label {
@@ -199,7 +226,6 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
 
 textarea::placeholder {
@@ -226,23 +252,14 @@ button[type="submit"]:hover {
   color: #28a745;
   font-weight: bold;
   margin-top: 10px;
+  text-align: center;
 }
 
-/*
-button[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+.error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 4px;
 }
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
-} */
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
